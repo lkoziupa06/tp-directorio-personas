@@ -1,9 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Layout from "./pages/Layout";
+import Home from "./App.js";
+import Persona from "./pages/Persona.jsx";
+import Contacto from "./pages/Contacto.jsx";
+import Estadisticas from "./pages/Estadisticas.jsx";
 
+export default function Index() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home/>} />
+          <Route path="persona" element={<Persona />} />
+          <Route path="contacto" element={<Contacto />} />
+          <Route path="estadisticas" element={<Estadisticas />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
+}
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
