@@ -1,4 +1,4 @@
-export default function estadisticas(){
+export default function Estadisticas(){
     return(
         <>
         </>

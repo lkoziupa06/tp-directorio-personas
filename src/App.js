@@ -1,17 +1,16 @@
 import personas from './Personas.js';
 import './App.css';
+import { CardListado } from './components/CardListado.jsx';
 
 function App() {
   return (
     <div className="App">
-      <h1>Listado de Personas</h1>
-      <ul>
+      <h1 className='title'>Listado de Personas</h1>
+      <div>
         {personas.map(persona => (
-          <li key={persona.id}>
-            {persona.nombre} {persona.apellido} - {persona.email} - {persona.edad} años
-          </li>
+          <CardListado key={persona.id} persona={persona}/>
         ))}
-      </ul>
+      </div>
     </div>
   );
 }
