@@ -1,7 +1,14 @@
-export const Form = ({link}) =>{
+import '../App.css'
+import { useNavigate } from 'react-router-dom';
+
+export const Form = () =>{
+    const navigate = useNavigate();
+    const handleClick = () => {
+        navigate('/contacto');
+      };
     return(
         <>
-            <form action={link} method="POST" class="bg-light my-2 p-3 pt-2">
+            <form method="POST" class="bg-light my-2 p-3 pt-2">
                 <div class="form-group my-2">
                     <label for="nombre" class="form-label fw-bolder">Nombre</label>
                     <input class="form-control" type="text" id="nombre" name="nombre" required></input>
@@ -14,7 +21,7 @@ export const Form = ({link}) =>{
                     <label for="mensaje" class="form-label fw-bolder">Mensaje</label>
                     <textarea class="form-control" style={{ resize: 'none' }} id="mensaje" name="mensaje" rows="4" required/>
                 </div>
-                <button class="btn btn-primary mt-2" type="submit">Enviar</button>
+                <button class="btn btn-primary mt-2" onClick={handleClick}>Enviar</button>
             </form>
         </>
     )

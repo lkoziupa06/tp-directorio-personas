@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <h1 className='title'>Listado de Personas</h1>
-      <div>
+      <div className='container-lista'>
         {personas.map(persona => (
           <CardListado key={persona.id} persona={persona}/>
         ))}
