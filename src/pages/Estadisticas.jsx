@@ -17,7 +17,9 @@ export default function Estadisticas() {
   
     return (
         <>
-            <h2>Estadísticas</h2>
+            <div className='title-container'>
+                <h1 className='title'>Estadísticas</h1>
+            </div>
             <div className="estadisticas-container">
                 <div className="stat-item">
                     <FaUserPlus className="icon" />

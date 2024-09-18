@@ -67,7 +67,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 300px; /* Ajuste del tamaño cuadrado */
+  width: 300px; 
   height: 300px;
   border: 1px solid #ccc;
   border-radius: 10px;
@@ -101,10 +101,11 @@ h2 {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Efecto hover */
 }
 
-.persona{
-  text-align: center;
-  padding: 40px;
+.container-persona{
+  display: flex;
   justify-content: center;
+  align-items: center;
+  margin-top: 10px;
 }
 
 .navbar {
@@ -209,4 +210,10 @@ button:hover {
   color: #555;
   margin: 0;
   margin-left: 10px;
+}
+
+.title-container{
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }

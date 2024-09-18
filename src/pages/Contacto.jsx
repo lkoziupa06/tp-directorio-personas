@@ -3,8 +3,10 @@ import '../App.css'
 export default function Contacto(){
     return(
         <>
-            <div className="persona">
-                <h1>Contactanos!</h1>
+            <div className="title-container">
+                <h1 className="title">Contactanos!</h1>
+            </div>
+            <div>
                 <Form/>
             </div>
         </>
